@@ -1,3 +1,5 @@
+import userData from "../fixtures/userData.json"
+
 describe('Orange Test', () => {
 
   const selectorsList = {
@@ -6,11 +8,20 @@ describe('Orange Test', () => {
     loginButton: "('.oxd-button')"
   }
 
-
+  // const userData = {
+  //   userSucess:{
+  //     username: 'Admin',
+  //     password: 'admin123',
+  //   },
+  //   userFail:{
+  //     username:'Teste',
+  //     password: 'Teste',
+  //   }
+  // }
 
   it('login-success', () => {
     cy.visit('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login')
-    cy.get(selectorsList.usernameField).type('Admin')
+    cy.get(selectorsList.usernameField).type(userData["userSucess "]["username "])
     cy.get(selectorsList.passwordField).type('admin123')
     cy.get('.oxd-button').click()
     cy.location('pathname').should('equal','/web/index.php/dashboard/index')
@@ -19,8 +30,8 @@ describe('Orange Test', () => {
 
   it('login-fail', () => {
     cy.visit('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login')
-    cy.get(selectorsList.usernameField).type('ssss')
-    cy.get(selectorsList.passwordField).type('ssssaaaasasa')
+    cy.get(selectorsList.usernameField).type('Teste')
+    cy.get(selectorsList.passwordField).type(userData["userFail "]['password '])
     cy.get('.oxd-button').click()
     cy.get('.oxd-alert-content')
    })
