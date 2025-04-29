@@ -1,25 +1,26 @@
-class login{
-    
+class LoginPage{
+
     selectorList (){
         const selectors = {
-
             usernameField: "[name='username']",
             passwordField: "[name='password']",
-            loginButton: "('.oxd-button')",
+            loginButton:('.oxd-button'), 
 
         }
+        return selectors
+    }
+
+    loginWithUser(username, password){
+        cy.get(this.selectorList().usernameField).type(username)
+        cy.get(this.selectorList().passwordField).type(password)
+        cy.get(this.selectorList().loginButton).click()
     }
 
     acesseLoginPage(){
         cy.visit('/auth/login')
     }
 
-    loginWithUser(username, password){
-        cy.get(this.selectorList().usernameField).type(username)
-        cy.get(tyhis.selectorList().password).type(password)
-        cy.get(this.selectorList.loginButton).click()
-    }
 
 }
 
-export default loginPage
+export default LoginPage
