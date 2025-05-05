@@ -16,15 +16,14 @@ describe('Orange Test', () => {
     // usernameField: "[name='username']",
     // passwordField: "[name='password']",
     // loginButton: "('.oxd-button')",
-  
-    firstNameField: "[name='firstName']",
-    middleName: "[name='middleName']",
-    LastNameField:"[name='lastName']",
-    EmployeeID: ':nth-child(1) > :nth-child(1) > .oxd-input-group > :nth-child(2) > .oxd-input',
-    OtherId: ':nth-child(3) > :nth-child(1) > :nth-child(2) > .oxd-input-group > :nth-child(2) > .oxd-input',
-    LicenseExpiry:':nth-child(2) > .oxd-input-group > :nth-child(2) > .oxd-date-wrapper > .oxd-date-input > .oxd-input',
-    ButtonEndCalend: '.--close',
-    Nationality: '.oxd-select-dropdown > :nth-child(1)'
+    // firstNameField: "[name='firstName']",
+    // middleName: "[name='middleName']",
+    // LastNameField:"[name='lastName']",
+    // EmployeeID: ':nth-child(1) > :nth-child(1) > .oxd-input-group > :nth-child(2) > .oxd-input',
+    // OtherId: ':nth-child(3) > :nth-child(1) > :nth-child(2) > .oxd-input-group > :nth-child(2) > .oxd-input',
+    // LicenseExpiry:':nth-child(2) > .oxd-input-group > :nth-child(2) > .oxd-date-wrapper > .oxd-date-input > .oxd-input',
+    // ButtonEndCalend: '.--close',
+    // Nationality: '.oxd-select-dropdown > :nth-child(1)'
   }
 
   // const userData = { 
@@ -46,7 +45,7 @@ describe('Orange Test', () => {
     TesteDashboard.VerificaDashbord();
     // testMenu.chamaMenu();
     cy.get(':nth-child(6) > .oxd-main-menu-item').click()
-    testeFormulario.chamaFormulario();
+    testeFormulario.chamaFormulario('Silvio','Barbosa','Testando');
     
     // cy.get("[href='/web/index.php/pim/viewMyDetails']").click()
     

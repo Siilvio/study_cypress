@@ -16,10 +16,10 @@ class formulario{
         return selectors
     }
 
-    chamaFormulario(){
-        cy.get(this.selectorsList().firstNameField).clear().type('Primeiro Nome')
-        cy.get(this.selectorsList().middleName).clear().type('Nome do Meio')
-        cy.get(this.selectorsList().LastNameField).clear().type('Terceiro Nome')
+    chamaFormulario(primeiroNome,segundoNome,terceiroNome){
+        cy.get(this.selectorsList().firstNameField).clear().type(primeiroNome)
+        cy.get(this.selectorsList().middleName).clear().type(segundoNome)
+        cy.get(this.selectorsList().LastNameField).clear().type(terceiroNome)
 
     }
 
